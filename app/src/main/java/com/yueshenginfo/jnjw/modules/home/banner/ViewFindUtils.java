@@ -7,7 +7,6 @@ import android.view.View;
  * 作者：李忠峰 on 2016/5/16 01:06
  * 邮箱：i@iiii.name
  */
-@SuppressWarnings({ "unchecked" })
 public class ViewFindUtils
 {
     /**
