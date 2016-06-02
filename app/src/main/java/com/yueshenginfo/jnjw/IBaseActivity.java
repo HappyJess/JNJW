@@ -53,17 +53,17 @@ public abstract class IBaseActivity extends FragmentActivity {
     /**
      * 初始化控件
      */
-    public abstract void initView();
+    public abstract void initViews();
 
     /**
      * 初始化数据
      */
-    public abstract void initData();
+    public abstract void initDatas();
 
     /**
      * 设置监听
      */
-    public abstract void setListener();
+    public abstract void setListeners();
 
     /**
      * 根据控件id查找控件

@@ -13,15 +13,13 @@ import android.widget.TextView;
 import com.yueshenginfo.jnjw.publics.utils.EmptyUtils;
 
 /**
- * Title: BaseFragment<br/>
+ * Title: IBaseFragment<br/>
  * Description: Fragment基类<br/>
- * <p/>
- * Copyright: Copyright (c) 众远科技<br/>
- * Company: 青岛美德威文化传播有限公司<br/>
- *
- * @author create 高越 2015年10月12日<br/>
- * @version 1.0
- * @since 1.0
+ * Copyright: Copyright (c) 山东悦升<br/>
+ * Company: 山东悦升信息技术有限公司<br/>
+ * Author: created 李忠峰 2016/5/27<br/>
+ * Since: 1.0
+ * Version: 1.0
  */
 public abstract class IBaseFragment extends Fragment {
 
@@ -89,17 +87,17 @@ public abstract class IBaseFragment extends Fragment {
     /**
      * 子类初始化View操作
      */
-    public abstract void initView();
+    public abstract void initViews();
 
     /**
      * 子类实现初始化数据操作
      */
-    public abstract void initData();
+    public abstract void initDatas();
 
     /**
      * 子类实现初始化监听操作
      */
-    public abstract void setListener();
+    public abstract void setListeners();
 
     /**
      * 设置title

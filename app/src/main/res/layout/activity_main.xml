@@ -1,34 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<android.support.v4.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:banner="http://schemas.android.com/apk/res-auto"
-    android:background="#000"
+    android:id="@+id/dl_left"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <FrameLayout
+    <!--主布局-->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <com.yueshenginfo.jnjw.modules.home.banner.ImageBanner
-            android:id="@+id/banner_circle"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--bb_isLoopEnable 是否支持循环，默认true -->
+        <com.yueshenginfo.jnjw.modules.home.banner.SimpleImageBanner
+            android:id="@+id/sib_corner_rectangle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            banner:bb_indicatorCornerRadius="2dp"
+            banner:bb_indicatorHeight="4dp"
+            banner:bb_indicatorSelectColor="@color/red"
+            banner:bb_indicatorUnselectColor="@color/darkred"
+            banner:bb_indicatorWidth="10dp"
+            banner:bb_isLoopEnable="true"
+            banner:bb_scale="0.5"/>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            banner:bb_delay="2"
-            banner:bb_period="2"
-            banner:bb_barColor="#44000000"
-            banner:bb_indicatorGravity="CENTER"
-            banner:bb_scale="0.5"/>
-        <com.flyco.pageindicator.indicator.RoundCornerIndicaor
-            android:id="@+id/indicator_circle"
-            xmlns:rci="http://schemas.android.com/apk/res-auto"
-            android:layout_gravity="center_horizontal|bottom"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="焦点："
+                android:textColor="@color/red"
+                android:textSize="15sp"/>
+
+            <com.yueshenginfo.jnjw.modules.home.banner.SimpleTextBanner
+                android:id="@+id/stb"
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                banner:bb_isIndicatorShow="false"
+                banner:bb_period="2"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#44ff0000"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#4400ff00"
+                android:orientation="horizontal"
+                android:paddingBottom="4dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="#55ff0000"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_jwbm"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="建委部门"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="#88ff0000"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_bmfw"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="便民服务"/>
+
+                    <Button
+                        android:id="@+id/btn_cjdsj"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="城建大数据"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#5500ff00"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="4dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="#88ff0000"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_xxgk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="信息公开"/>
+
+                    <Button
+                        android:id="@+id/btn_tzgg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="通知公告"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="#55ff0000"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_hddt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="互动大厅"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <!--侧滑菜单-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#fff"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_left"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/ic_launcher"/>
+
+        <ListView
+            android:id="@+id/lv_left_menu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="15dp"
-            rci:rci_cornerRadius="3dp"
-            rci:rci_gap="5dp"
-            rci:rci_selectColor="@color/red"
-            rci:rci_height="6dp"
-            rci:rci_width="6dp"/>
-    </FrameLayout>
-</RelativeLayout>
+            android:divider="@null"
+            android:text="DrawerLayout"/>
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>

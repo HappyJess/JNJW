@@ -8,6 +8,8 @@
     <color name="title_text_color">#000</color><!-- 标题栏文字颜色 -->
     <color name="title_right_color">#ff6b3d</color><!-- 标题栏右侧文字颜色 -->
 
+    <color name="txt_color">#1d1e1e</color>
+
     <!-- 常用颜色 -->
     <color name="transparent">#00000000</color><!-- 透明色 -->
     <color name="white">#ffffff</color> <!-- 白色 -->
