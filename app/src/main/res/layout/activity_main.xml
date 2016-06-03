@@ -12,7 +12,7 @@
         android:orientation="vertical">
 
         <!--bb_isLoopEnable 是否支持循环，默认true -->
-        <com.yueshenginfo.jnjw.modules.home.banner.SimpleImageBanner
+        <com.yueshenginfo.jncc.modules.home.banner.SimpleImageBanner
             android:id="@+id/sib_corner_rectangle"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
                 android:textColor="@color/red"
                 android:textSize="15sp"/>
 
-            <com.yueshenginfo.jnjw.modules.home.banner.SimpleTextBanner
+            <com.yueshenginfo.jncc.modules.home.banner.SimpleTextBanner
                 android:id="@+id/stb"
                 android:layout_width="fill_parent"
                 android:layout_height="35dp"
